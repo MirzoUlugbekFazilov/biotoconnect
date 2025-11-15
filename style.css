@@ -4,9 +4,16 @@
     box-sizing: border-box;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-attachment: fixed;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -22,19 +29,6 @@ body {
     width: 100%;
     padding: 40px 30px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-}
-
-.logo {
-    width: 40px;
-    height: 40px;
-    background: black;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 24px;
-    margin-bottom: 30px;
 }
 
 .profile-section {
@@ -73,18 +67,6 @@ h1 {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 2px solid #e0e0e0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    transition: all 0.3s;
-}
-
-.social-icons a {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
     border: 2px solid #333;
     display: flex;
     align-items: center;
@@ -93,16 +75,20 @@ h1 {
     transition: all 0.3s;
 }
 
-.social-icons a:first-child {
+.social-icons a:nth-child(1) {
     color: #E4405F;
 }
 
-.social-icons a:last-child {
+.social-icons a:nth-child(2) {
     color: #25D366;
 }
 
+.social-icons a:nth-child(3) {
+    color: #0077B5;
+}
+
 .social-icons a:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
     border-color: currentColor;
     background: rgba(0, 0, 0, 0.02);
 }
@@ -122,9 +108,10 @@ h1 {
     align-items: center;
     transition: all 0.3s;
     cursor: pointer;
-    text-decoration: none; /* Add this */
-    color: inherit; /* Add this */
+    text-decoration: none;
+    color: inherit;
 }
+
 .link-card:hover {
     background: #ebebeb;
     transform: translateY(-2px);
@@ -135,60 +122,21 @@ h1 {
     color: #333;
 }
 
-.menu-dots {
-    width: 24px;
-    height: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    align-items: center;
-    justify-content: center;
-}
-
-.dot {
-    width: 4px;
-    height: 4px;
-    background: #666;
-    border-radius: 50%;
-}
-
-.join-btn {
-    background: white;
-    border: 2px solid #333;
-    border-radius: 25px;
-    padding: 15px 30px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    margin: 30px 0;
-    width: 100%;
-    transition: all 0.3s;
-}
-
-.join-btn:hover {
-    background: #333;
-    color: white;
-}
-
 .footer {
     text-align: center;
     color: #666;
     font-size: 14px;
     display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-.footer{
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #666;
-    text-decoration: none;
+    gap: 10px;
+    margin-top: 30px;
 }
 
-.footer a:hover {
+.connect-text {
+    font-size: 18px;
+    font-weight: 500;
     color: #333;
 }
 
